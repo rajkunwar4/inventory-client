@@ -14,7 +14,7 @@ const Navbar = () => {
     (state) => state.global.isSidebarCollapsed
   );
 
-  const toggleSidbar = () => {
+  const toggleSidebar = () => {
     dispatch(SetIsSidebarCollapsed(!isSidebarCollapsed));
   };
 
@@ -25,7 +25,7 @@ const Navbar = () => {
         {/* Menu Button */}
         <button
           className="px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100"
-          onClick={toggleSidbar}
+          onClick={toggleSidebar}
         >
           <Menu className="w-4 h-4 " />
         </button>
