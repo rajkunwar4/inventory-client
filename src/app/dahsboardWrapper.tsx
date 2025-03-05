@@ -13,7 +13,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
 
   const isDarkMode = useAppSelector((state) => state.global.isDarkMode);
 
-  //dark mode toggle
+  //dark mode toggle 
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
@@ -23,7 +23,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   });
 
   return (
-    <div className={`light flex bg-gray-50 text-gray-900 w-full min-h-screen`}>
+    <div className={`${isDarkMode? "dark" : "light"} flex bg-gray-50 text-gray-900 w-full min-h-screen`}>
       <Sidebar />
 
       <main
@@ -38,6 +38,9 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
+
+// the reason we created a wrapper so that the the children:<DashboardLayout/> can accesss the value provided by the provider
+// we have to provide the Providers minimum one level above so that we can access in the child components 
 const DahsboardWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     <StoreProvider>
