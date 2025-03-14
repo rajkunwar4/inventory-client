@@ -47,10 +47,12 @@ const SideBarLink =({
 const Sidebar = () => {
   const dispatch = useAppDispatch();
 
+  //sidebar collapsed or not via redux global store
   const isSidebarCollapsed = useAppSelector(
     (state) => state.global.isSidebarCollapsed
   );
 
+  //sidebar toggle 
   const toggleSidebar = () => {
     dispatch(SetIsSidebarCollapsed(!isSidebarCollapsed));
   };

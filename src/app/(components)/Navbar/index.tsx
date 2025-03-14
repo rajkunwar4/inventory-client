@@ -15,6 +15,7 @@ const Navbar = () => {
     (state) => state.global.isSidebarCollapsed
   );
 
+  //darkd mode or not via redux global store
   const isDarkMode = useAppSelector(
     (state) => state.global.isDarkMode
   )
