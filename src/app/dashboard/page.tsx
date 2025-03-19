@@ -1,6 +1,9 @@
 "use client"
 
+import CardExpenseSummary from "./CardExpenseSummary"
 import CardPopularProducts from "./CardPopularProducts"
+import CardPurchaseSummary from "./CardPurchaseSummary"
+import CardSalesSummary from "./CardSalesSummary"
 
 const Dashboard = () => {
   return (
@@ -8,10 +11,11 @@ const Dashboard = () => {
       {/* Popular Products Card */}
       <CardPopularProducts/>
       {/* Sales summary card */}
-      <div className="row-span-3 xl:row-span-6 bg-gray-500"></div>
+      <CardSalesSummary/>
       {/* Purchase Summary Card */}
-      <div className="row-span-2 xl:row-span-3 col-span-1 md:col-span-2 xl:col-span-1 bg-gray-500"></div>
-      <div className="row-span-3 bg-gray-500"></div>
+      <CardPurchaseSummary/>
+      {/* Expense Summary card */}
+      <CardExpenseSummary/>
       <div className="md:row-span-1 xl:row-span-2 bg-gray-500"></div>
       <div className="md:row-span-1 xl:row-span-2 bg-gray-500"></div>
       <div className="md:row-span-1 xl:row-span-2 bg-gray-500"></div>
