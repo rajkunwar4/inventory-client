@@ -41,7 +41,6 @@ const CardSalesSummary = () => {
     return <div className="m-5">Failed to fetch data</div>;
   }
 
-  console.log(salesData)
 
   return (
     <div className="row-span-3 xl:row-span-6 bg-white shadow-md rounded-2xl flex flex-col justify-between">
